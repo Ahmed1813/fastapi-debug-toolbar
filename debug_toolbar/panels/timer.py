@@ -31,6 +31,9 @@ class TimerPanel(Panel):
 
     @property
     def content(self) -> str:
+        if not self.has_content:
+            return ""
+
         stats = self.get_stats()
 
         rows = (

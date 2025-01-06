@@ -9,9 +9,7 @@ readme = "README.md"
 license = "BSD-3-Clause"
 requires-python = ">=3.8"
 dynamic = ["version"]
-authors = [
-  { name = "Dani", email = "dani@domake.io" }
-]
+authors = [{ name = "Dani", email = "dani@domake.io" }]
 keywords = ["fastapi", "debug", "profiling"]
 
 classifiers = [
@@ -42,7 +40,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "fastapi >=0.106.0",
+    "fastapi>=0.114.0",
     "anyio >=3.0.0",
     "Jinja2 >=2.9",
     "pydantic >=2.0",
@@ -73,12 +71,7 @@ test = [
     "tortoise-orm",
 ]
 
-doc = [
-    "mkdocs",
-    "mkdocs-material",
-    "markdown-include",
-    "mkdocstrings[python]",
-]
+doc = ["mkdocs", "mkdocs-material", "markdown-include", "mkdocstrings[python]"]
 
 [tool.hatch.build.targets.sdist]
 include = ["debug_toolbar"]
@@ -95,12 +88,12 @@ ignore_missing_imports = true
 
 [tool.ruff.lint]
 select = [
-    "E",  # pycodestyle errors
-    "W",  # pycodestyle warnings
-    "F",  # pyflakes
-    "I",  # isort
-    "C",  # flake8-comprehensions
-    "B",  # flake8-bugbear
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes
+    "I", # isort
+    "C", # flake8-comprehensions
+    "B", # flake8-bugbear
 ]
 
 [tool.ruff.lint.flake8-bugbear]
